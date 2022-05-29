@@ -113,3 +113,12 @@ p.text span{
   color: #6feaf6;
 }
 
+/* 
+  NOVOS APRENDIZADOS:
+
+1) .seat:not(.occupied):hover
+  Selecionando elementos que não possuem a classe referida
+
+2) perspective: 1000px; 
+  Dando uma noção espacial de perspectiva
+*/
