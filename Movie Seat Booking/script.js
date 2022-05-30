@@ -9,9 +9,27 @@ const total = document.getElementById("total");
 
 let ticketPrice = +movieSelect.value;
 
+// Save selected movie index and price
+function setMovieData(movieIndex, moviePrice){
+  localStorage.setItem('selectedMovieIndex', movieIndex)
+  localStorage.setItem('selectedMoviePrice', moviePrice)
+}
+
 // Update total and count
 function updatedSelectedCount() {
   const selectedSeats = document.querySelectorAll(".row .seat.selected");
+
+  //Saving seat selection on local storage. Seats need to 
+  //be indexed, so we need to go through these steps:
+  //1- Copy selected seats into an array
+  //2- Map through array
+  //3- Return a new array indexes
+
+  const seatsIndex = [...selectedSeats].map(seat => 
+     [...seats].indexOf(seat)
+  )
+
+  localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex))
 
   const selectedSeatsCount = selectedSeats.length;
 
@@ -22,6 +40,7 @@ function updatedSelectedCount() {
 // Movie select event
 movieSelect.addEventListener("change", e => {
   ticketPrice = +e.target.value;
+  setMovieData(e.target.selectedIndex, e.target.value)
   updatedSelectedCount();
 });
 
@@ -32,7 +51,7 @@ container.addEventListener("click", e => {
     !e.target.classList.contains("occupied")
   ) {
     e.target.classList.toggle("selected");
-
+    //poderia ser toggle, add ou remove
     updatedSelectedCount();
   }
 });
