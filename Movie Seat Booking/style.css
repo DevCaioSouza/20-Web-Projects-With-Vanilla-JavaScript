@@ -117,6 +117,7 @@ p.text span{
   NOVOS APRENDIZADOS:
 
 1) .seat:not(.occupied):hover
+  pseudo class: :not()
   Selecionando elementos que não possuem a classe referida
 
 2) perspective: 1000px; 
