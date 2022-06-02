@@ -7,12 +7,27 @@ const total = document.getElementById("total");
 let ticketPrice = +movie.value
 
 const updatedSelectedCount = function(){
+  const selectedSeats = document.querySelectorAll('.row .seat.selected');
+  
 
-
+  count.innerText = +selectedSeats.length
+  total.innerText = +selectedSeats.length * ticketPrice
 }
 
+// Event Listener - Movie change
+movie.addEventListener('change', e => {
+  ticketPrice = +e.target.value
+  updatedSelectedCount()
+}) 
+
+// Event Listeners - Selected Seats
 container.addEventListener('click', function(e){
-  console.log(e.target)
+  if (e.target.classList.contains('seat') && 
+   !e.target.classList.contains('occupied')){
+    e.target.classList.toggle('selected')
+  }
+
+  updatedSelectedCount()
 })
 
 /*
