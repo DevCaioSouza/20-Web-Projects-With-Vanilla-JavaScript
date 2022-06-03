@@ -19,6 +19,8 @@ const updatedSelectedCount = function(){
 
   console.log(seatsIndex)
 
+  localStorage.setItem('selectedSeats',JSON.stringify(seatsIndex))
+
   count.innerText = selectedSeatsCount
   total.innerText = selectedSeatsCount * ticketPrice
 }
