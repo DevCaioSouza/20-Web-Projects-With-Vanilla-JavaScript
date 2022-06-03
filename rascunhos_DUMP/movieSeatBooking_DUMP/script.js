@@ -11,6 +11,8 @@ const updatedSelectedCount = function(){
   
   const selectedSeatsCount = selectedSeats.length
 
+  
+
   count.innerText = selectedSeatsCount
   total.innerText = selectedSeatsCount * ticketPrice
 }
@@ -33,18 +35,21 @@ container.addEventListener('click', function(e){
 
 /*
 
-Desafios da construção do app:
+Adicionando funcionalidades do LocalStorage
 
-1° Referenciar os elementos no DOM
+1) Passar de um simples nodelist para um array com o número
+das cadeiras (em formato de index)
+  dica: usar spread operator
+  dica: indexOf()
 
-2° Adicionar a classe selected para os assentos clicados
-  dica: e.target.classList ... 
-
-3° Atualizar as informações de cadeiras compradas
-  dica: referenciar as cadeiras selecionadas, colocar em um NodeList
-  identificar o número de cadeiras selecionadas
-  Atualizar os textos de acordo com as compras
-
-4° Evento que atualiza quando outro filme é selecionado
-  dica: "change"...
 */
+
+/* 
+==== TOMANDO NOTAS DA AULA ==== 
+
+x) forEach não retorna nada, map retorna um array
+x) Caso no indexOf() passarmos um valor que não existe, retornará
+  o index -1
+
+*/
+
