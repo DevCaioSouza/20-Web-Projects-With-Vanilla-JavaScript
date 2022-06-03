@@ -11,7 +11,13 @@ const updatedSelectedCount = function(){
   
   const selectedSeatsCount = selectedSeats.length
 
-  
+  //Explicação: Dentro de 'seats', mapearemos todas as cadeiras
+  //selecionadas (selectedSeats) e daremos um index à elas
+  const seatsIndex = [...selectedSeats].map(function(seat){
+    return [...seats].indexOf(seat)
+  })
+
+  console.log(seatsIndex)
 
   count.innerText = selectedSeatsCount
   total.innerText = selectedSeatsCount * ticketPrice
