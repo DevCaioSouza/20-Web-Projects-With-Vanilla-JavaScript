@@ -6,6 +6,12 @@ const total = document.getElementById("total");
 
 let ticketPrice = +movie.value
 
+//Salvar o index e o preço do filme selecionado no Local Storage 
+function setMovieData(movieIndex, moviePrice){
+  localStorage.setItem('selectedMovieIndex', movieIndex);
+  localStorage.setItem('selectedMoviePrice', moviePrice);
+}
+
 const updatedSelectedCount = function(){
   const selectedSeats = document.querySelectorAll('.row .seat.selected');
   
@@ -28,6 +34,7 @@ const updatedSelectedCount = function(){
 // Event Listener - Movie change
 movie.addEventListener('change', e => {
   ticketPrice = +e.target.value
+  setMovieData(e.target.selectedIndex, e.target.value)
   updatedSelectedCount()
 }) 
 
@@ -50,6 +57,7 @@ das cadeiras (em formato de index)
   dica: usar spread operator
   dica: indexOf()
 
+2) Salvar o index e o preço do filme selecionado no Local Storage 
 */
 
 /* 
