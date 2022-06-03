@@ -75,6 +75,9 @@ container.addEventListener("click", (e) => {
   }
 });
 
+// Initial count and total set
+updatedSelectedCount()
+
 /*
   o "+" antes da chamada, altera o tipo pra number
 
