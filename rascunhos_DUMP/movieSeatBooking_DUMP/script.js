@@ -58,6 +58,7 @@ das cadeiras (em formato de index)
 x) forEach não retorna nada, map retorna um array
 x) Caso no indexOf() passarmos um valor que não existe, retornará
   o index -1
+x) Faltou o Prof. explicar que selectedIndex é uma propriedade do JS
 
 */
 
