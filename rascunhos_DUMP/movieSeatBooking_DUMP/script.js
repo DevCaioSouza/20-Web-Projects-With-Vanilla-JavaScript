@@ -45,6 +45,12 @@ function populateUi(){
       }
     })
   }
+
+  const selectedMovieIndex = localStorage.getItem('selectedMovieIndex')
+
+  if(selectedMovieIndex !== null) {
+    movie.selectedIndex = selectedMovieIndex
+  }
 }
 
 // > -1
