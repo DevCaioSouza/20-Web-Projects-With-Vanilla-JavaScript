@@ -73,6 +73,9 @@ container.addEventListener('click', function(e){
   updatedSelectedCount()
 })
 
+//Initial count and total set
+updatedSelectedCount()
+
 /*
 
 Adicionando funcionalidades do LocalStorage
