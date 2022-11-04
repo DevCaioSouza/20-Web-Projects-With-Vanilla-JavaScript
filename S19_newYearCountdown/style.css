@@ -17,4 +17,16 @@ body{
   text-align: center;
 }
 
+.countdown{
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+}
+
+.countdown .time{
+  /* border: 1px solid red; */
+  padding: 10px;
+  margin: 0px 10px;
+}
+
 
